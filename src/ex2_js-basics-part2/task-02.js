@@ -3,7 +3,6 @@ function showElemArr(array){
     console.log(array[i]);
   }
   console.log (array.length)
-}
-
+};
 
 module.exports = showElemArr;

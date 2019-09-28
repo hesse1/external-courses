@@ -6,5 +6,6 @@ function returnMaxValue(array){
     }
   }
   return maxValue
-}
+};
+
 module.exports = returnMaxValue;

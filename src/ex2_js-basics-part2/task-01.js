@@ -5,7 +5,6 @@ function returnDataTypes(value){
     return 'number'
   }
   return undefined;
-}
-
+};
 
 module.exports = returnDataTypes;

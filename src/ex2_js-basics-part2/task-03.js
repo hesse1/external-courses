@@ -1,7 +1,7 @@
 function countEvenOddNum(array){
-  let even = 0;
-  let odd = 0;
-  let zero = 0;
+  let even = 0,
+      odd = 0,
+      zero = 0;
   let arr = [];
   for(let i = 0; i < array.length; i++){
     if(array[i] === 0 && typeof(array[i]) === 'number'){
@@ -14,5 +14,6 @@ function countEvenOddNum(array){
   }
    arr.push(even, odd, zero);
    return arr;
-}
+};
+
 module.exports = countEvenOddNum;

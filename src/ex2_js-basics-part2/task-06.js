@@ -9,6 +9,6 @@ function checkPrimeNumber(number){
       }
   }
   return('Число' + " " + number + ' - ' + 'простое число');
-}
+};
 
 module.exports = checkPrimeNumber;
