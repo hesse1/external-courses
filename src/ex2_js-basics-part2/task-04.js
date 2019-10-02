@@ -4,7 +4,7 @@ function searchSameNumber(array) {
       let value = array[i];
       if (arr.indexOf(value) !== -1) {
           return true;
-      }
+      };
       arr.push(value);
   }
   return false;

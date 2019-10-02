@@ -1,4 +1,4 @@
-function countEvenOddNum(array){
+function countEvenOddNum(array) {
   let even = 0,
       odd = 0,
       zero = 0;
