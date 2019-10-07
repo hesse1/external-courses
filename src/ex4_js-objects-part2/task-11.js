@@ -1,4 +1,4 @@
-function test(string){
+function countLettersInWord(string){
   let str = string.toLowerCase();
   let newStr = str.split('');
   let wordLetter = {};
@@ -21,4 +21,4 @@ function test(string){
  
 }
 
-module.exports = test;
+module.exports = countLettersInWord;
