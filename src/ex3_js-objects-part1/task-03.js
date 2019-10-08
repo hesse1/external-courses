@@ -1,9 +1,7 @@
 function checkPropertyObj(nameString, obj){
-  for(let key in obj){
-   if(key === nameString){
+   if(nameString in obj){
      return true;
    }
-  }
   return false;
  }
 
