@@ -2,11 +2,11 @@ function slice(array, begin, end) {
   let newArray = [];
   let value, value2;
 
-  if (begin >= 0 && typeof end === 'undefined') {
+  if (begin >= 0 && !end) {
     for (let i = begin; i < array.length; i++) {
       newArray.push(array[i])
     }
-  } else if (typeof begin === 'undefined' && typeof end === 'undefined') {
+  } else if (!begin && !end) {
     return Object.assign(newArray, array)
   } else if (begin >= 0 && end > 0) {
     for (let i = begin; i < end; i++) {
@@ -14,7 +14,7 @@ function slice(array, begin, end) {
     }
   }
 
-  if (begin < 0 && typeof end === 'undefined') {
+  if (begin < 0 && !end) {
     value = array.length + begin;
     for (let i = value; i < array.length; i++) {
       newArray.push(array[i])
