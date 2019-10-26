@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task-2 Form</title>
+  <style>
+    .form-block{
+      width: 700px;
+      margin: 0 auto;
+    }
+    .form__row {
+      margin-top: 10px;
+    }
+    .form__input {
+      margin-top: 10px;
+    }
+    .form__buttons {
+      display: flex;
+    }
+    .form__buttons-elem {
+      margin-right: 8px;
+    }
+    .form__elem-password {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-block">
+    <form action="http://httpbin.org/post" class="form" method="POST">
+      <div class="form__elem">
+        <div class="form__personal-data">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Personal data
+            </legend>
+            <div class="form__personal-info">
+              <div class="form__row">
+                <div class="form__row-fields">
+                  <div class="form__input">
+                    <label for="name" class="form__label">Surname</label>
+                    <input type="text" name="Surname" id="name" class="form__input-text">
+                  </div>
+                  <div class="form__input">
+                    <label for="surname" class="form__label">First Name</label>
+                    <input type="text" id="surname" name="First Name" class="form__input-text">
+                  </div>
+                  <div class="form__input">
+                    <label for="middle" class="form__label">Middle Name</label>
+                    <input type="text" name="Middle Name" id="middle" class="form__input-text">
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-gender">
+                  <label for="gender" class="form__label">You are</label>
+                  <input type="radio" name="gender" value="Male" id="gender" class="form__radio">Male
+                  <input type="radio" name="gender" value="Female" class="form__radio">Female
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-age">
+                  <label for="age" class="form__label">Age</label>
+                  <input type="number" name="age" id="age" class="input__number" min="18" max="101">
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-county">
+                  <label for="select" class="form__label">Country of Residence</label>
+                  <select name="County" id="select" class="form__select">
+                    <option value="Russia" class="form__select-option">Russia</option>
+                    <option value="USA" class="form__select-option">USA</option>
+                    <option value="Spanish" class="form__select-option">Spanish</option>
+                    <option value="French" class="form__select-option">French</option>
+                    <option value="Denmark" class="form__select-option">Denmark</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-city">
+                  <span class="form__city-title">City</span>
+                  <input type="checkbox" value="Ryazan" name="city" id="ryazan" class="form__checkbox">
+                  <label for="ryazan" class="form__label">Ryazan</label>
+                  <input type="checkbox" value="Moscow" name="city" id="Moscow" class="form__checkbox">
+                  <label for="Moscow" class="form__label">Moscow</label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-upload">
+                  <label for="file" class="form__label">Photography</label>
+                  <input type="file" name="Photo" id="file" class="form__input-file">
+                </div>
+              </div>
+            </div>
+            <hr class="form__line">
+            <div class="form__vacancy">
+              <div class="form__row">
+                <div class="form__row-multiple__select">
+                  <label for="mult" class="form__label">Title</label>
+                  <select multiple name="Vacancy" id="mult" class="multiple__select" style="height: 140px;">
+                    <option value="Technologies" style="font-weight: bold;" class="multiple__select-option">
+                      Technologies
+                    </option>
+                    <option value="Web master" style="margin-left:10px" class="multiple__select-option">
+                      Web master
+                    </option>
+                    <option value="Database Administrator" style="margin-left:10px" class="multiple__select-option">
+                      Database Administrator
+                    </option>
+                    <option value="Computer-aided design" style="margin-left:10px" class="multiple__select-option">
+                      Computer-aided design
+                    </option>
+                    <option value="Finance" style="font-weight: bold;" class="multiple__select-option">
+                      Finance
+                    </option>
+                    <option value="Web master" style="margin-left:10px" class="multiple__select-option">
+                      Economic planning
+                    </option>
+                    <option value="Database Administrator" style="margin-left:10px" class="multiple__select-option">
+                      Managament accountig
+                    </option>
+                    <option value="Budgeting and planning" style="margin-left:10px" class="multiple__select-option">
+                      Budgeting and planning
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-salary">
+                  <label for="range" class="form__label">Salary</label>
+                  <input type="range" name="Salary" id="range" class="form__input-range">
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row-message">
+                  <textarea name="Message" cols="40" placeholder="Tell us about yourself..." rows="10"
+                    class="textarea"></textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form__elem">
+        <div class="form__contact-info">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Contact information
+            </legend>
+            <div class="form__fields">
+              <div class="form__input">
+                <label for="site" class="form__label">Site</label>
+                <input type="url" name="Site" id="site" class="form__input-url">
+              </div>
+              <div class="form__input">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" name="Email" id="email" class="form__input-email">
+              </div>
+              <div class="form__input">
+                <label for="phone" class="form__label">Phone</label>
+                <input type="tel" name="Phone" id="phone" class="form__input-phone">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form__elem">
+        <div class="form__elem-password">
+          <label for="pass" class="form__lebel">Password</label>
+          <input type="password" name="Password" id="pass" required>
+        </div>
+      </div>
+      <div class="form__buttons">
+        <div class="form__buttons-elem">
+          <input type="submit" value="Submit">
+        </div>
+        <div class="form__buttons-elem">
+          <input type="reset" value="Reset">
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
