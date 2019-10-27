@@ -1,0 +1,12 @@
+.table__tr:nth-child(even){
+  background: #f2f6fa;
+}
+.table__tr_uppercase{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.table__td{
+  padding: 10px 15px;
+}
