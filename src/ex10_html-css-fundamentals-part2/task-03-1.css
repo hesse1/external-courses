@@ -1,0 +1,17 @@
+@import url('task-03-2.css');
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+.table__tr{
+  text-align: center;
+}
+.table__tr:nth-child(odd){
+  background: #e3eaf3;
+}
+.table__tr:hover{
+  background: #e2e5e9;
+}
