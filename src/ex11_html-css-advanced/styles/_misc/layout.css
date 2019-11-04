@@ -20,12 +20,20 @@ body{
   width: 95%;
   max-width: 1152px;
   display: flex;
+  height: 100%;
 }
+.container_scroll{
+  overflow-x: scroll;
+}
+.container_scroll::-webkit-scrollbar-track {border-radius: 4px; background: #fff;}
+.container_scroll::-webkit-scrollbar {width: 12px; height: 12px;}
+.container_scroll::-webkit-scrollbar {height: 12px;}
+.container_scroll::-webkit-scrollbar-thumb {border-radius: 5px;background: #CBCBCB;}
 
 .wrapper{
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .wrapper:after{

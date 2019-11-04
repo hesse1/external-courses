@@ -9,6 +9,7 @@
 .footer__col{
   display: flex;
   flex-basis: 50%;
+  align-items: center;
 }
 .active__tasks{
   display: flex;
