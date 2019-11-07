@@ -1,0 +1,152 @@
+.block {
+  display: inline-block;
+  margin-right: 200px;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle.one {
+  top: 0;
+  left: 35%;
+  background: red;
+}
+
+.circle.two {
+  top: 35%;
+  right: 0;
+  background: pink;
+}
+
+.circle.three {
+  bottom: 0;
+  left: 35%;
+  background: purple;
+}
+
+.circle.four {
+  top: 35%;
+  left: 0;
+  background: green;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animation {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  animation: transforms 7s linear infinite;
+}
+
+@keyframes transforms {
+  0% {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  }
+
+  15% {
+    border-radius: 0px;
+  }
+
+  30% {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  }
+
+  40% {
+    width: 50px;
+    height: 50px;
+    transform: skew(15deg, 15deg);
+  }
+
+  60% {
+    transform: rotate(360deg)
+  }
+
+  80% {
+    background: rgb(219, 219, 219);
+    background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0%, rgba(84, 95, 103, 1) 9%, rgba(215, 215, 215, 1) 25%, rgba(45, 29, 82, 1) 43%, rgba(167, 167, 167, 1) 50%, rgba(77, 77, 77, 1) 100%);
+  }
+
+  100% {
+    background: rgb(219, 219, 219);
+    background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0%, rgba(84, 95, 103, 1) 9%, rgba(215, 215, 215, 1) 25%, rgba(45, 29, 82, 1) 43%, rgba(167, 167, 167, 1) 50%, rgba(77, 77, 77, 1) 100%);
+    border-radius: 50%;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  margin-top: 20%;
+  border-bottom: 1px solid brown;
+}
+
+.ball {
+  position: relative;
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+  animation: jumps 3s linear infinite;
+  animation-direction: alternate;
+}
+
+.square {
+  display: inline-block;
+  margin-right: 100px;
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+
+@keyframes jumps {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  25% {
+    top: -80px;
+    right: -80px;
+  }
+
+  50% {
+    top: 0px;
+    right: -176px;
+  }
+
+  75% {
+    top: -84px;
+    right: -250px
+  }
+
+  100% {
+    top: 0px;
+    right: -336px;
+  }
+}
