@@ -36,11 +36,6 @@ body{
   height: 100%;
   overflow: hidden;
 }
-.wrapper:after{
-  content: "";
-  display: block;
-  height: 55px;
-}
 
 a{
   text-decoration: none;

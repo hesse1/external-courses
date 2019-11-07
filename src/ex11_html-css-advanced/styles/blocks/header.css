@@ -45,7 +45,7 @@
   color: #fff;
 }
 
-.create{
+.create__add-button{
 	display: flex;
 	background: #fff;
 	border: 1px solid #EBECF0;
@@ -73,18 +73,18 @@
 	cursor: pointer;
 }
 
-.user__pic{
+.user__logo{
 	width: 35px;
 	height: 35px;
   background: #fff;
   overflow: hidden;
 	border-radius: 50%;
 }
-.user__pic-svg{
+.user__logo-svg{
   width: 35px;
   height: 35px;
 }
-.triangle{
+.user-block__triangle{
   margin-left: 5px;
 }
 .triangle__svg{
