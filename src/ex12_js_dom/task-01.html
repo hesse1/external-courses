@@ -49,18 +49,21 @@
       position: absolute;
       cursor: pointer;
       background: none;
-      border: 1px solid black;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
+      border: 1px solid #b4b4b4;
+      box-shadow: 0px 0px 0px 0px #b4b4b4;
+      border-radius: 50%; 
+      width: 50px;
+      height: 50px;
       transition: .4s;
-      outline: none;
+    }
+    .button:focus{
+      outline: 1px solid tomato;
     }
     .button_left{
-      left:-50px ;top: 50%;
+      left:-80px ;top: 50%;
     }
     .button_right{
-      right:-50px ;top: 50%;
+      right:-80px ;top: 50%;
     }
     .button__img{
       opacity: 1;
@@ -70,7 +73,7 @@
     }
     .button:hover{
       transform: scale(1.1);
-      background: wheat;
+      box-shadow: 0px 0px 5px 2px #b4b4b4;
     }
     .opacity{
       opacity: 0;
