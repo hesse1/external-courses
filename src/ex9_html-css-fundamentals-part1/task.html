@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .form {
+      width: 565px;
+      padding: 15px;
+
+    }
+
+    .form-desc {
+      margin-bottom: 12px;
+    }
+
+    .form-desc::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+      margin-top: 8px;
+    }
+
+    .form__required {
+      font-size: 14px;
+    }
+
+    .form__row {
+      margin-bottom: 25px;
+    }
+
+    .form__title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .form__required {
+      color: red;
+    }
+
+    .form__label {
+      width: 95px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .form__hint {
+      display: inline-block;
+      width: 131px;
+      margin-left: 40px;
+      padding: 6px 10px;
+      background-color: #d45252;
+      color: #fff;
+      position: relative;
+      transition: .5s;
+      opacity: 0;
+    }
+
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top: 7px solid transparent;
+      border-right: 10px solid #d45252;
+      border-bottom: 7px solid transparent;
+
+      left: -26px;
+      top: 9px
+    }
+
+    .form__input {
+      outline: none;
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid gray;
+      width: 219px;
+      margin-bottom: 10px;
+      ;
+      height: 36px;
+    }
+
+    .form__input:invalid {
+      border: 1px solid red
+    }
+
+    .form__input:invalid+.form__hint {
+      opacity: 1;
+    }
+
+    .form__input:valid {
+      border: 1px solid gray;
+
+    }
+
+    .form__input:valid {
+      opacity: 1
+    }
+
+    .form__input.form__area {
+      width: 278px;
+      height: 83px;
+    }
+
+    .button {
+      padding: 8px 30px;
+      border-radius: 5px;
+      border: 1px solid grey;
+      background-color: #f2f2f2;
+      font-weight: bold;
+      margin-left: 66px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form">
+    <div class="form-desc">
+      <div class="form__title">Form Here</div>
+      <div class="form__required">* required fields</div>
+    </div>
+    <form class="form__container">
+      <div class="form__fields">
+        <div class="form__row">
+          <label class="form__label" for="name">Name:</label>
+          <input class="form__input" type="text" id="name" placeholder="">
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" type="email" id="email" placeholder="Enter your email" required>
+          <div class="form__hint">
+            Form field hint
+            <div class="triangle"></div>
+          </div>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="web">Website:</label>
+          <input class="form__input" type="url" id="web" placeholder="Enter your Website" required>
+          <div class="form__hint">
+            Form field hint
+            <div class="triangle"></div>
+          </div>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="area">Message:</label>
+          <textarea class="form__input form__area" id="area"></textarea>
+        </div>
+      </div>
+      <div class="form__buttns">
+        <input class="button" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
