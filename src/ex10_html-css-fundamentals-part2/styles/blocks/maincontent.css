@@ -1,0 +1,162 @@
+.maincontent{
+  position: relative;
+}
+.about{
+  position: relative;
+}
+.about__section-one{
+  min-height: 885px;
+  background-color: #fff;
+  background-image: url('../../img/backg/iback.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section__title{
+  color: #fff;
+  width: 775px;
+  padding-top: 237px;
+  margin-left: 225px;
+  position: relative;
+}
+.section__title:before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 88px;
+  height: 90px;
+  background: url('../../img/images/amper.png') center center no-repeat;
+  bottom: 24px;
+  left: 10px;
+}
+.title{
+  font-size: 58px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section__title-desc{
+  font-size: 45px;
+  text-align: right;
+  font-weight: 300;
+}
+.slider{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 755px;
+  left: 435px;
+  bottom: -380px;
+}
+.slider__list{
+  display: flex;
+}
+.slider__item{
+  width: 322px;
+  height: 241px;
+  position: relative;
+}
+.slider__item-like{
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.like__link{
+  color:#fff
+}
+.slider__item-like_green{
+  background: #78bf31;
+  opacity: .8;
+}
+.slider__item-like_green .like__link-svg{
+  fill: #adff63;
+}
+.slider__item-like_green:hover .like__link-svg {
+  fill: #508b16;
+}
+
+
+.slider__item-like_yellow{
+  background: #feeb75;
+  opacity: .8;
+}
+.slider__item-like_yellow .like__link{
+  color: #cc9800;
+ 
+}
+.slider__item-like_yellow .like__link-svg{
+  fill: #cc9800;
+ 
+}
+.slider__item-like_yellow:hover .like__link-svg{
+ fill: #ff3c00;
+}
+
+.like__link{
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like__link-svg{
+  width: 32px;
+  height: 32px;
+  transition: .4s;
+}
+.slider__btn:hover .slider__svg{
+  fill: #abaaaa;
+}
+.slider__btn{
+  padding-top: 95px;
+  text-align: center;
+  display: block;
+  width: 110px;
+  background-color: #f4f4f4;
+  transition: .4s;
+}
+.slider__svg{
+  width: 24px;
+  height: 40px;
+  fill: #d4d4d4;
+  transition: .4s;
+}
+.about__section-two{
+  margin-bottom: 185px;
+}
+.isama__list{
+  display: flex;
+}
+.isama__item{
+  width: 525px;
+  margin-right: 120px;
+  display: flex;
+}
+.isama__item:last-child{
+  margin-right: 0;
+}
+.isama__img{
+  margin-right: 25px;
+}
+.isama__title{
+  color: #6d6e71;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.footer{
+  position: relative;
+  background: #3998d3;
+  height: 100px;
+}
+.footer__row{
+  display: flex;
+  justify-content: center;
+}
+.logo__title_foot{
+  color: #fff;
+}

@@ -1,0 +1,82 @@
+@media screen and (max-width: 768px){
+  .header:after{
+    display: none;
+  }
+  .header__row{
+    flex-basis: 100%;
+    justify-content: space-around;
+  }
+  .header__row_basis{
+    flex-basis: 40%;
+  }
+  .burger__menu{
+    display: block;
+    cursor: pointer;
+  }
+  .burger__list{
+    width: 40px;
+    height: 55px;
+  }
+  .burger__item{
+    height: 5px;
+    background: #3687c4;
+    margin-bottom: 8px;
+  }
+  .logo{
+    width: 155px;
+    height: 60px;
+  }
+  .logo__title{
+    top: -13px;
+    left: 55%;
+  }
+  .header__contacts{
+    display: none;
+  }
+  .header__search{
+    margin-right: 0px;
+  }
+  .nav{
+    display: none;
+  }
+  .container_dflex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .about__section-one{
+    min-height: 690px;
+  }
+  .about__section-two{
+    margin-top: 20px;
+  }
+  
+  .section__title{
+    padding-top: 137px;
+    margin-left: 0px;
+  }
+  .section__title:before{
+    display: none;
+  }
+  .title{
+    font-size: 50px;
+  }
+  .section__title-desc{
+    font-size: 38px;
+    padding-right: 56px;
+  }
+  .slider{
+    display: none;
+  }
+   .isama__list{
+    flex-direction: column;
+  }
+   .isama__item{
+   
+    width: 100%;
+    margin-right: 0;
+  } 
+  .footer{
+    display: flex;
+    align-items: center;
+  } 
+}
