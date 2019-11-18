@@ -1,0 +1,94 @@
+.header{
+  background: #0067A3;
+  padding: 10px 0;
+  position: relative;
+}
+.header__col{
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+.header__col_flex_end{
+  justify-content: flex-end;
+}
+.burger__menu{
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.burger__item{
+	width: 20px;
+	height: 2px;
+	background: #fff;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+}
+.burger__item:last-child{
+  margin-bottom: 0;
+}
+.burger__item:after{
+	content: "";
+	display: block;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin-left: -10px;
+}
+.logo{
+  font-size: 28px;
+  color: #fff;
+}
+
+.create__add-button{
+	display: flex;
+	background: #fff;
+	border: 1px solid #EBECF0;
+	align-items: center;
+	padding: 6px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	outline: none;
+  transition: .4s;
+  margin-right: 40px;
+}
+.create:hover{
+	background: #EBECF0;
+	transform: scale(0.9)
+}
+.create__icon{
+  display: block;
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+}
+.user-block{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.user__logo{
+	width: 35px;
+	height: 35px;
+  background: #fff;
+  overflow: hidden;
+	border-radius: 50%;
+}
+.user__logo-svg{
+  width: 35px;
+  height: 35px;
+}
+.user-block__triangle{
+  margin-left: 5px;
+}
+.triangle__svg{
+  width:12px;
+  height: 8px;
+  fill: #fff;
+}
