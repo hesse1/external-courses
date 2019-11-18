@@ -1,0 +1,86 @@
+*{
+  box-sizing: border-box;
+}
+body{
+   background: #0067A3;
+}
+.wrapper{
+
+ height: 600px;
+ width: 100%;
+
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.user-block{
+	display: flex;
+	align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  margin: 100px 100px;
+}
+.active .user-block__triangle{
+  transform: rotate(-180deg)
+}
+
+.user__logo{
+	width: 35px;
+	height: 35px;
+  background: #fff;
+  overflow: hidden;
+	border-radius: 50%;
+}
+.user__logo-svg{
+  width: 35px;
+  height: 35px;
+}
+.user-block__triangle{
+  margin-left: 5px;
+}
+.triangle__svg{
+  width:12px;
+  height: 8px;
+  fill: #fff;
+}
+
+.dropdawn{
+	background: #EBECF0;
+	width: 215px;
+	border: 1px solid #b4b4b4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  top: 46px;
+  transition: .7s;
+}
+
+
+.drop__item-link{
+	display: block;
+	border: 1px solid transparent;
+	background: #fff;
+	padding: 5px 20px;
+  border-radius: 6px;
+  color: #000;
+}
+.drop__item-link:hover{
+	background: #CBCBCB;
+}
+.drop__item{
+	margin-bottom: 10px;
+}
+.drop__item:last-child{
+	margin-bottom: 0px;
+}

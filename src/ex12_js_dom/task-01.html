@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+   
+    .wrapper{
+      display: flex;
+      margin: 100px;
+      justify-content: center;
+    }
+    ul,li{
+      padding: 0;
+      margin: 0;
+    }
+    li{
+      list-style: none;
+    }
+    .slider{
+      position: relative;
+    }
+    .slider__img{
+      width: 403px;
+      height: 203px;
+      position: relative;
+      box-shadow: 0px 12px 7px 0px #2f231e;
+    }
+    .img__list{
+      height: 100%;
+    }
+    .img__item{
+      width: 403px;
+      height: 203px;
+      position: absolute;
+      overflow: hidden;
+      transition: opacity .6s;
+    }
+    .img__item-pic{
+      display: block;
+      max-width: 100%;
+    }
+    .button{
+      position: absolute;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #b4b4b4;
+      box-shadow: 0px 0px 0px 0px #b4b4b4;
+      border-radius: 50%; 
+      width: 50px;
+      height: 50px;
+      transition: .4s;
+    }
+    .button:focus{
+      outline: 1px solid tomato;
+    }
+    .button_left{
+      left:-80px ;top: 50%;
+    }
+    .button_right{
+      right:-80px ;top: 50%;
+    }
+    .button__img{
+      opacity: 1;
+      transition: .4s;
+      display: block;
+      max-width: 100%;
+    }
+    .button:hover{
+      transform: scale(1.1);
+      box-shadow: 0px 0px 5px 2px #b4b4b4;
+    }
+    .opacity{
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="slider">
+      <div class="slider__img">
+        <ul class="img__list" id="list">
+          <li class="img__item">
+            <img class="img__item-pic" src="asset/1.jpg" alt="">
+          </li>
+          <li class="img__item">
+            <img class="img__item-pic" src="asset/2.jpg" alt="">
+          </li>
+          <li class="img__item">
+            <img class="img__item-pic" src="asset/3.jpg" alt="">
+          </li>
+          
+        </ul>
+      </div>
+      <div class="slider__controls">
+        <button class="button button_left" id="left">
+          <img src="asset/left-up-arrow.png" alt="" class="button__img">
+        </button>
+        <button class="button button_right" id="right">
+          <img src="asset/right-up-arrow.png" alt="" class="button__img">
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="js/task1.js"></script>
+</body>
+</html>
