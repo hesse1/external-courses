@@ -1,4 +1,4 @@
-const Calculator =(function calc()  {
+const Calculator =(function calc() {
   let sum = 0;
 
   function add(number = 0){
