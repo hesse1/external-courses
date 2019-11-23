@@ -1,8 +1,4 @@
 const input = document.querySelector('.input')
-const items = document.querySelectorAll('.list__item')
-const wrap = document.querySelector('.list')
-const wrapper = document.querySelector('.content')
-const list = document.querySelector('.list-person')
 const listPerson = document.querySelector('.list-person')
 
 let dataMock = [{
@@ -41,7 +37,7 @@ let dataMock = [{
 // Создание лишек
 function createList(data) {
   listPerson.innerHTML = "";
-  for(let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     const item = document.createElement('li');
     item.className = "list-person__item";
     item.innerText = data[i].name
@@ -50,25 +46,20 @@ function createList(data) {
 }
 createList(dataMock)
 
-input.oninput = debounce(function(){
-  let value = input.value;
-  let newData = dataMock.filter(function(i){
-       return i.name.includes(value);
-     })
+input.oninput = debounce(function () {
+  let value = input.value.toLowerCase();
+  console.log(this);
+
+  let newData = dataMock.filter(function (i) {
+    return i.name.toLowerCase().includes(value);
+  })
   createList(newData)
-  console.log('1');
-  
 }, 1000)
 
 function debounce(func, time) {
+  let timerDebouce;
   return function () {
-    let previousCall = this.lastCall;
-    this.lastCall = Date.now();
-    if (previousCall && ((this.lastCall - previousCall) <= time)) {
-      clearTimeout(this.lastCallTimer);
-    }
-    this.lastCallTimer = setTimeout(function(){
-      func();
-    }, time);
+    clearTimeout(timerDebouce);
+    timerDebouce = setTimeout(() => func.apply(this), time)
   }
 }
