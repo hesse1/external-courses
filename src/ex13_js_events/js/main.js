@@ -1,8 +1,8 @@
 let backLogList = document.querySelector('.backlog__list')
 let button = document.querySelector('.button');
-let tasksItem = document.querySelector('.tasks__list');
+let tasks = document.querySelector('.tasks__list');
 let items = document.querySelectorAll('.tasks__item');
-let backlogs = document.querySelectorAll('.backlog__list')
+let lists = document.querySelectorAll('.backlog__list')
 
 button.addEventListener('click', createInput)
 
@@ -16,25 +16,25 @@ function createInput() {
   input.addEventListener('focusout', function (e) {
     let value = e.target.value.trim();
     if (value === '') {
-      tasksItem.querySelector('.task__input').remove()
+      tasks.querySelector('.task__input').remove()
     } else {
-      createNewItem(value)
+      createItem(value)
     }
   })
 }
 
 //Создаем таск со значением из инпута
-function createNewItem(value) {
+function createItem(value) {
   let item = document.createElement('li')
   item.className = 'backlog__item';
   item.innerText = value;
   backLogList.appendChild(item);
-  tasksItem.querySelector('.task__input').remove()
-  createNewIssues(value);
+  tasks.querySelector('.task__input').remove()
+  createIssue(value);
 }
 
 //Создаем новый issue нового таска
-function createNewIssues(value) {
+function createIssue(value) {
   let data = localStorage.getItem('data');
   let dataMock = JSON.parse(data);
   let dataMockStr;
@@ -48,36 +48,36 @@ function createNewIssues(value) {
 }
 
 //Создаем таск, если он если в localStorage 
-function checkElementsInLocalStor() {
+function checkElement() {
   let locStor = localStorage.getItem('data');
   let parseLocStor = JSON.parse(locStor);
   for (let i = 0; i < parseLocStor.length; i++) {
     if (parseLocStor[i].issues.length !== 0) {
       var item = parseLocStor[i].issues;
-      createTaskInCard(item, i)
-      buttonsUnlocked(i)
+      createTask(item, i)
+      // buttonsUnlocked(i)
     }
   }
 }
 
-function createTaskInCard(items, index) {
+function createTask(items, index) {
   for (let i = 0; i < items.length; i++) {
     for (key in items[i]) {
       if (key === 'name') {
         let item = document.createElement('li')
         item.className = 'backlog__item';
         item.innerText = items[i][key];
-        backlogs[index].appendChild(item)
+        lists[index].appendChild(item)
       }
     }
   }
 }
 
 // Проверям lS на наличие данных 
-function checkLocalStorageofNull() {
-  let lStorage = localStorage.getItem('data');
-  let lsStorageObj = JSON.parse(lStorage)
-  if (lStorage === null) {
+function checkEmpty() {
+  let storage = localStorage.getItem('data');
+  let lsStorageObj = JSON.parse(storage)
+  if (!storage) {
     let emptyData = [{
         title: 'Backlog',
         issues: []
@@ -98,5 +98,5 @@ function checkLocalStorageofNull() {
     localStorage.setItem('data', JSON.stringify(emptyData))
   }
 }
-checkLocalStorageofNull();
-checkElementsInLocalStor();
+checkEmpty();
+checkElement();
