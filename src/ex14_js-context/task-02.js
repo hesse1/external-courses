@@ -1,26 +1,26 @@
 function Hangman(word) {
   this.word = word;
-  this.arrWord = this.word.split('');
+  this.words = this.word.split('');
   this.mistakes = 6;
-  this.wrongLetter = [];
+  this.wrongLetters = [];
   this.result = [];
-  for(let i = 0; i < this.arrWord.length; i++){
+  for(let i = 0; i < this.words.length; i++){
     this.result.push("_")
   }
   
   this.guess = function (letter) {
     if (this.word.includes(letter)) {
-      for (let i = 0; i < this.arrWord.length; i++) {
-        if (this.arrWord[i] === letter) {
+      for (let i = 0; i < this.words.length; i++) {
+        if (this.words[i] === letter) {
           this.result[i] = letter
         }
       }
       console.log(this.result.join(''));
     } else {
-      if(this.wrongLetter.indexOf(letter) === -1){
+      if(this.wrongLetters.indexOf(letter) === -1){
         this.mistakes = this.mistakes - 1
-        this.wrongLetter.push(letter)
-        console.log(`wrong letter, errors left ${this.mistakes} | ${this.wrongLetter}`);
+        this.wrongLetters.push(letter)
+        console.log(`wrong letter, errors left ${this.mistakes} | ${this.wrongLetters}`);
       }
     }
     if (!this.result.includes("_")) {
@@ -40,7 +40,7 @@ function Hangman(word) {
     return this.mistakes;
   }
   this.getWrongSymbols = function () {
-    return this.wrongLetter
+    return this.wrongLetters
   }
   this.getStatus = function () {
     console.log((`${this.result.join('')} | errors left ${this.mistakes}`));
@@ -48,11 +48,11 @@ function Hangman(word) {
 
   this.startAgain = function (word) {
     this.word = word;
-    this.arrWord = this.word.split('');
+    this.words = this.word.split('');
     this.mistakes = 6;
-    this.wrongLetter = [];
+    this.wrongLetters = [];
     this.result = [];
-    for(let i = 0; i < this.arrWord.length; i++){
+    for(let i = 0; i < this.words.length; i++){
       this.result.push("_")
     }
   }
