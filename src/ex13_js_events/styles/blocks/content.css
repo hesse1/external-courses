@@ -1,0 +1,82 @@
+.main-content{
+	position: relative;
+	flex: 1;
+}
+.tasks__list{
+	display: flex;
+	transition: .7s;
+}
+.tasks__item{
+	position: relative;
+	align-self: flex-start;
+	flex-shrink: 0;
+	width: 282px;
+	background: #EBECF0;
+	margin: 50px 0;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: flex;
+	flex-direction: column;
+	max-height: 538px;
+  color: #000;
+	margin-right: 15px;
+}
+.backlog{
+	overflow-y: auto;
+	padding: 0 10px;
+}
+.backlog::-webkit-scrollbar-track {border-radius: 4px; background: #fff;}
+.backlog::-webkit-scrollbar {width: 12px; height: 12px;}
+.backlog::-webkit-scrollbar {height: 6px;}
+.backlog::-webkit-scrollbar-thumb {border-radius: 5px;background: #CBCBCB;}
+
+
+.block__title{
+	display: flex;
+	margin-bottom: 10px;
+}
+.block__title-dots{ 
+	margin-left: auto;
+	cursor: pointer;
+}
+.backlog__item{
+	background: #fff;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	text-align: center;
+	padding: 5px 0;
+}
+.task__input{
+	width: 100%;
+	border: none;
+	background: #fff;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	text-align: center;
+	padding: 5px 0;
+}
+.button{
+	background: none;
+	border: none;
+	color: #5E6C84;
+	cursor: pointer;
+}
+.button:before{
+	content: "+";
+	display: inline-block;
+	margin-right: 5px;
+}
+.disabled{
+	cursor: default;
+	color: #a8a9ad;
+}
+.drop__list{
+	visibility: hidden;
+	color: #000;
+	bottom: -80px;
+	position: absolute;
+	border: 1px solid black;
+}
+.visible{
+	visibility: visible;
+}

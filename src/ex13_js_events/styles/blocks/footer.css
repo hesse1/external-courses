@@ -1,0 +1,28 @@
+.footer{
+  background: #0067A3;
+  position: relative;
+  height: 55px;
+  margin-top: -55px;
+  display: flex;
+  align-items: center;
+}
+.footer__col{
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+}
+.active__tasks{
+  display: flex;
+}
+.active__tasks-title{
+  margin-right: 4px;
+}
+.kanban__info{
+  display: flex;
+}
+.kanban__info-name{
+  margin-right: 4px;
+}
+.footer__col_flex_end{
+  justify-content: flex-end;
+}
