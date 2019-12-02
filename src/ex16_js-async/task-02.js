@@ -34,7 +34,7 @@ let dataMock = [{
     name: 'Ricky Stwerat',
   }
 ]
-// Создание лишек
+
 function createList(data) {
   listPerson.innerHTML = "";
   for (let i = 0; i < data.length; i++) {
@@ -48,18 +48,17 @@ createList(dataMock)
 
 input.oninput = debounce(function () {
   let value = input.value.toLowerCase();
-  console.log(this);
 
-  let newData = dataMock.filter(function (i) {
-    return i.name.toLowerCase().includes(value);
+  let newData = dataMock.filter(function (item) {
+    return item.name.toLowerCase().includes(value);
   })
   createList(newData)
 }, 1000)
 
 function debounce(func, time) {
-  let timerDebouce;
+  let timerId;
   return function () {
-    clearTimeout(timerDebouce);
-    timerDebouce = setTimeout(() => func.apply(this), time)
+    clearTimeout(timerId);
+    timerId = setTimeout(() => func.apply(this), time)
   }
 }

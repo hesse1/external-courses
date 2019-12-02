@@ -1,6 +1,6 @@
 const requestURL = 'https://jsonplaceholder.typicode.com/users';
 
-function sendReques(method, url, body = null) {
+function fetchPolyfill(method = 'GET', url, body = null) {
   return new Promise(function (resolve, reject) {
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);
@@ -27,10 +27,10 @@ const body = {
   name: 'name',
   age: 21
 }
-sendReques('GET', requestURL)
+fetchPolyfill('GET', requestURL)
   .then(data => console.log(data))
   .catch(err => console.log(err));
 
-sendReques('POST', requestURL, body)
+fetchPolyfill('POST', requestURL, body)
   .then(data => console.log(data))
   .catch(err => console.log(err));
