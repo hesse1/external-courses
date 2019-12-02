@@ -16,12 +16,12 @@ Gift.prototype.calcWeight = function () {
 }
 
 Gift.prototype.sort = function () {
-  return this.candy.sort(function(a, b){
+  return this.candy.sort(function (a, b) {
     return a.weight - b.weight
   })
 }
 Gift.prototype.searchName = function (name) {
-  return this.candy.filter(sweet => sweet.name.includes(name))
+  return this.candy.filter(sweet => sweet.name === name)
 }
 
 const alenka = new Candy('alenka', 200)
@@ -32,4 +32,4 @@ const gift = new Gift([alenka, caramel, milkChocolate, nutella])
 console.log(gift);
 console.log(gift.calcWeight());
 console.log(gift.sort());
-console.log(gift.searchName('nutella'));
+console.log(gift.searchName('alenka'));

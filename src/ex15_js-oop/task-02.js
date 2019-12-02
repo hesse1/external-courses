@@ -1,40 +1,49 @@
 class ElectricalAppliances {
-  constructor(name, power, isTurnOn) {
+  constructor(name, power) {
     this.name = name;
     this.power = power;
-    this.isTurnOn = isTurnOn;
+    this.isTurnOn = false;
+  }
+
+  isTurn() {
+    if (!this.isTurnOn) {
+      this.isTurnOn = true
+    }
+    return
   }
 }
 
-class Room{
-  constructor(nameRoom,devices) {
-    this.room = nameRoom;
-    this.devices = devices;
-  }
-
-  powerConsumption() {
-    let allPower = 0;
-    this.devices.forEach(devices => {
-      if(devices.isTurnOn){
-        allPower += devices.power
-      }
-    })
-    return allPower
-  }
-
-  searchDevice(name) {
-    return this.devices.filter(function(devices) {
-      return devices.name === name
-    })
+class Laptop extends ElectricalAppliances {
+  constructor(name, power, wireless, amountChargeInHourse, diagonal) {
+    super(name, power);
+    this.wireless = wireless
+    this.amountChargeInHourse = amountChargeInHourse
+    this.diagonal = diagonal
   }
 }
 
-const tv = new ElectricalAppliances('TV', 60, true);
-const laptop = new ElectricalAppliances('laptop', 30, false);
-const pc = new ElectricalAppliances('pc', 30, true)
-const robotVacuum = new ElectricalAppliances('robot vacuum', 10, true);
-const parlor = new Room('parlor',[tv,laptop,pc,robotVacuum])
+class RobotVacuum extends ElectricalAppliances {
+  constructor(name, power, wireless, amountChargeInHourse) {
+    super(name, power);
+    this.wireless = wireless
+    this.amountChargeInHourse = amountChargeInHourse
+  }
+}
 
-console.log(parlor.powerConsumption());
-console.log(parlor.searchDevice('laptop'));
+class Room {
+  constructor(devices) {
+    this.devices = devices
+  }
 
+  searchDevice(value) {
+    return this.devices.filter(element => element.name === value);
+  }
+}
+
+const laptop = new Laptop('hp', 40, true, 5, 21);
+const robotVacuum = new RobotVacuum('robot vacuum', 20, true, 7);
+const tv = new ElectricalAppliances('samsung', 25)
+const room = new Room([laptop, robotVacuum, tv])
+tv.isTurn()
+laptop.isTurn()
+console.log(room.searchDevice('robot vacuum'));
